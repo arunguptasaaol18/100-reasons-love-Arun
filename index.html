@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>100 Reasons I Love You ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ffe0e9, #ffc2d1);
+    color: #8b1745;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 25px;
+    text-align: center;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 10px 35px #d8759580;
+}
+
+.heart {
+    font-size: 60px;
+    animation: heartbeat 1.2s infinite;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.subtitle {
+    color: #b45b7b;
+    font-size: 16px;
+}
+
+.reason-box {
+    background: #fff0f5;
+    border-radius: 18px;
+    padding: 25px 15px;
+    margin: 25px 0;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reason-number {
+    font-size: 14px;
+    color: #d65b87;
+    margin-bottom: 15px;
+}
+
+.reason {
+    font-size: 23px;
+    line-height: 1.5;
+}
+
+button {
+    background: #e75480;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #c92c61;
+    transform: scale(1.05);
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #c46b8b;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heart">❤️</div>
+
+    <h1>100 Reasons<br>I Love You</h1>
+
+    <p class="subtitle">
+        Every little thing about you is special to me.
+    </p>
+
+    <div class="reason-box">
+        <div class="reason-number" id="number">
+            A little surprise for you 💌
+        </div>
+
+        <div class="reason" id="reason">
+            Ready to discover why I love you?
+        </div>
+    </div>
+
+    <button onclick="showReason()">
+        Click for a Reason 💕
+    </button>
+
+    <div class="footer">
+        Made with all my heart, just for you ❤️
+    </div>
+
+</div>
+
+<script>
+
+const reasons = [
+"You make my ordinary days beautiful.",
+"Your smile is my favourite thing.",
+"You understand me like nobody else.",
+"You make me feel loved.",
+"Your voice makes my day better.",
+"You are my favourite person.",
+"I love the way you laugh.",
+"You make my heart feel at home.",
+"You are beautiful inside and out.",
+"You make me smile without trying.",
+"I love talking to you.",
+"You make every moment special.",
+"You are my happy place.",
+"I love your cute little habits.",
+"You care about me.",
+"You make me feel lucky.",
+"I love your honesty.",
+"You are my favourite notification.",
+"You make distance feel smaller.",
+"I love your beautiful eyes.",
+"You inspire me to be better.",
+"You make me feel understood.",
+"I love your kindness.",
+"You are my favourite thought.",
+"You bring peace into my life.",
+"I love your personality.",
+"You make boring days exciting.",
+"I love your random messages.",
+"You are precious to me.",
+"I love your little surprises.",
+"You make me feel special.",
+"I love spending time with you.",
+"You are my comfort person.",
+"I love your excitement.",
+"You make my heart skip a beat.",
+"I love your way of caring.",
+"You are my favourite hello.",
+"I love your good morning texts.",
+"You make me feel appreciated.",
+"I love your adorable expressions.",
+"You are my sweetest dream.",
+"I love how you listen to me.",
+"You make me laugh.",
+"I love your warmth.",
+"You are my favourite memory.",
+"I love your beautiful heart.",
+"You make me feel confident.",
+"I love your presence.",
+"You are my little sunshine.",
+"I love your uniqueness.",
+"You make life more meaningful.",
+"I love your silly side.",
+"You are my favourite adventure.",
+"I love your hugs.",
+"You make me feel safe.",
+"I love your thoughtful words.",
+"You are my everyday happiness.",
+"I love your energy.",
+"You make me believe in love.",
+"I love your patience.",
+"You are my favourite person to talk to.",
+"I love your little jealous moments.",
+"You make my world brighter.",
+"I love your dreams.",
+"You are worth every effort.",
+"I love your cute voice.",
+"You make me feel connected.",
+"I love your beautiful soul.",
+"You are my favourite surprise.",
+"I love your affection.",
+"You make me feel important.",
+"I love your spontaneous nature.",
+"You are my sweetest distraction.",
+"I love your loyalty.",
+"You make my heart happy.",
+"I love your playful nature.",
+"You are my favourite story.",
+"I love your attention.",
+"You make me feel grateful.",
+"I love your beautiful smile.",
+"You are my biggest comfort.",
+"I love your messages.",
+"You make every day better.",
+"I love your charm.",
+"You are my favourite person in this world.",
+"I love your little imperfections.",
+"You make me feel special every day.",
+"I love your sweet gestures.",
+"You are my reason to smile.",
+"I love how we create memories.",
+"You make my life colourful.",
+"I love your heart.",
+"You are my today and my tomorrow.",
+"I love everything that makes you YOU.",
+"And the biggest reason is simply that you are YOU. ❤️"
+];
+
+let current = 0;
+
+function showReason() {
+
+    if (current < reasons.length) {
+
+        document.getElementById("number").innerText =
+        "Reason " + (current + 1) + " of 100 💌";
+
+        document.getElementById("reason").innerText =
+        reasons[current];
+
+        current++;
+
+    } else {
+
+        document.getElementById("number").innerText =
+        "One last thing 💖";
+
+        document.getElementById("reason").innerText =
+        "No matter how many reasons I write, they will never be enough to explain how much I love you.";
+
+        document.querySelector("button").innerText =
+        "I Love You ❤️";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
